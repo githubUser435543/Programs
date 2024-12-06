@@ -1,0 +1,13 @@
+eiefewf
+PASS_MAX_DAYS 20
+PASS_MIN_DAYS 32
+PASS_WARN_AGE 69
+
+neteipv4etcp_syncookies=0
+password       requsite        pam_pwquality.so retry = 3
+password  requsite        pam_pwquality.so retry = 3
+password    requsite    pam_pwquality.so retry = 3
+hello
+hello
+
+hello
