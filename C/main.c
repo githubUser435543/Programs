@@ -4,6 +4,7 @@ void win(){
     printf("win\n");
 }
 
+/**/
 void run(){
     char buff[8];
     //printf("%u\n", sizeof(buff));

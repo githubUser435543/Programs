@@ -1,6 +1,5 @@
 #!/bin/python3.11
-import sys
-input = sys.stdin.readline # make input fast
-print = sys.stdin.writeline # make output fast
 
+def foo(y=9): print(y)
 
+foo(5)

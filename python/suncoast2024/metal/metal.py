@@ -1,6 +1,6 @@
 s = input()
 
-def removePalindrome(rm, string, start, length):
+def removePalindrome(_, string, start, length):
     # include if not in palindrome range
     return "".join([string[i] for i in range(len(string)) if not (i >= start and i < start + length)]) 
 

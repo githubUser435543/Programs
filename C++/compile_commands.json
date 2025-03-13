@@ -1,0 +1,6 @@
+[
+  { "directory": "/home/ethan/Projects/C++",
+    "arguments": ["/usr/bin/clang++", "-Wall"],
+    "file": "*.cpp" }
+
+]

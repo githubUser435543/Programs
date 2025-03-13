@@ -5,7 +5,7 @@ from queue import Queue
 def shortestPathFloodFill(g, start, end):
     # visited[i][j] stores -1 if node not visited or distance from start if visited
     # this uses list comprehension if you want to look up how it works
-    visited = [[-1 for i in g[0]] for j in g]
+    visited = [[-1 for __ in g[0]] for _ in g]
     visited[start[0]][start[1]] = 0 
    
     # FILO data structure

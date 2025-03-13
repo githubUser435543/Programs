@@ -1,0 +1,54 @@
+<!DOCTYPE html><html>
+<head>
+<title></title>
+<style type="text/css">
+<!--
+.xflip {
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: fliph;
+}
+.yflip {
+    -moz-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    transform: scaleY(-1);
+    filter: flipv;
+}
+.xyflip {
+    -moz-transform: scaleX(-1) scaleY(-1);
+    -webkit-transform: scaleX(-1) scaleY(-1);
+    -o-transform: scaleX(-1) scaleY(-1);
+    transform: scaleX(-1) scaleY(-1);
+    filter: fliph + flipv;
+}
+-->
+</style>
+</head>
+<body>
+<a name=1></a><img src="uva_10646-1_1.png"/><br/>
+<b>10646</b><br/>
+<b>What&#160;is&#160;the&#160;Card?</b><br/>
+Kowshik&#160;and&#160;Tafsir&#160;are&#160;two&#160;brilliant&#160;students&#160;of&#160;Chittagong&#160;College,&#160;the&#160;best&#160;college&#160;for&#160;a&#160;century&#160;at<br/>Chittagong&#160;in&#160;Bangladesh.&#160;Their&#160;days&#160;begin&#160;with&#160;lots&#160;of&#160;classes&#160;and&#160;soon&#160;they&#160;become&#160;loaded.&#160;That<br/>is&#160;why,&#160;to&#160;give&#160;their&#160;brains&#160;rest,&#160;they&#160;like&#160;to&#160;play&#160;a&#160;card&#160;game&#160;“What&#160;is&#160;the&#160;card?”&#160;when&#160;they&#160;get&#160;free<br/>time&#160;between&#160;the&#160;classes.&#160;The&#160;game&#160;is&#160;described&#160;below:<br/>
+In&#160;this&#160;game,&#160;the&#160;value&#160;of&#160;a&#160;card&#160;is&#160;defined&#160;as&#160;the&#160;value&#160;of&#160;the&#160;card&#160;face&#160;if&#160;the&#160;card&#160;face&#160;shows&#160;a<br/>
+number&#160;between&#160;2&#160;and&#160;9,&#160;otherwise&#160;the&#160;value&#160;is&#160;10.&#160;Initially&#160;there&#160;is&#160;a&#160;pile&#160;consisting&#160;of&#160;52&#160;cards&#160;with<br/>card&#160;faces&#160;down.&#160;Take&#160;the&#160;top&#160;25&#160;cards&#160;of&#160;the&#160;pile&#160;in&#160;the&#160;hand.&#160;Set&#160;<i>Y&#160;</i>=&#160;0.&#160;Then&#160;execute&#160;three&#160;times<br/>the&#160;following&#160;steps&#160;together:<br/>
+•&#160;Take&#160;the&#160;top&#160;card&#160;of&#160;the&#160;cards&#160;of&#160;the&#160;pile&#160;and&#160;determine&#160;its&#160;value.<br/>
+•&#160;Let&#160;the&#160;card&#160;value&#160;be&#160;<i>X</i>.&#160;Add&#160;<i>X&#160;</i>to&#160;<i>Y&#160;</i>.<br/>
+•&#160;Put&#160;this&#160;card&#160;and&#160;the&#160;top&#160;(10&#160;<i>−&#160;X</i>)&#160;cards&#160;of&#160;the&#160;pile&#160;away.<br/>
+At&#160;last&#160;put&#160;the&#160;25&#160;remaining&#160;cards&#160;in&#160;your&#160;hand&#160;on&#160;top&#160;of&#160;the&#160;pile.&#160;The&#160;task&#160;is&#160;to&#160;determine&#160;the<br/>
+<i>Y&#160;</i>-th&#160;card&#160;from&#160;the&#160;pile,&#160;counted&#160;from&#160;the&#160;bottom.<br/>
+Tafsir&#160;and&#160;Kowshik&#160;know&#160;the&#160;initial&#160;order&#160;of&#160;the&#160;cards,&#160;so&#160;they&#160;think&#160;they&#160;can&#160;tell&#160;the&#160;<i>Y&#160;</i>-th&#160;card<br/>
+without&#160;looking&#160;in&#160;the&#160;pile,&#160;but&#160;they&#160;fail&#160;to&#160;detect&#160;the&#160;right&#160;card&#160;most&#160;of&#160;the&#160;time&#160;and&#160;think&#160;themselves<br/>to&#160;be&#160;dull.&#160;Please&#160;help&#160;them&#160;to&#160;increase&#160;their&#160;self-confidence.<br/>
+<b>Input</b><br/>
+The&#160;first&#160;line&#160;in&#160;the&#160;input&#160;file&#160;contains&#160;an&#160;integer&#160;representing&#160;the&#160;number&#160;of&#160;test&#160;cases.&#160;Each&#160;of&#160;the&#160;test<br/>cases&#160;follows&#160;below.&#160;Each&#160;case&#160;consists&#160;of&#160;52&#160;cards&#160;given&#160;in&#160;the&#160;order&#160;of&#160;the&#160;initial&#160;pile,&#160;from&#160;bottom&#160;to<br/>top.&#160;The&#160;format&#160;for&#160;each&#160;card&#160;is&#160;a&#160;string&#160;with&#160;2&#160;characters,&#160;first&#160;character&#160;is&#160;the&#160;value,&#160;second&#160;character<br/>is&#160;the&#160;suit.<br/>
+<b>Output</b><br/>
+For&#160;each&#160;test&#160;case,&#160;first&#160;print&#160;the&#160;serial&#160;number&#160;of&#160;the&#160;case&#160;and&#160;then&#160;print&#160;the&#160;target&#160;card&#160;separated&#160;by<br/>an&#160;space&#160;from&#160;the&#160;serial&#160;number.&#160;Check&#160;the&#160;sample&#160;input&#160;&amp;&#160;output.&#160;You&#160;are&#160;guaranteed&#160;that&#160;there&#160;is<br/>always&#160;a&#160;solution.<br/>
+<b>Sample&#160;Input</b><br/>
+2<br/>AC&#160;KC&#160;QC&#160;JC&#160;TC&#160;9C&#160;8C&#160;7C&#160;6C&#160;5C&#160;4C&#160;3C&#160;2C&#160;AD&#160;KD&#160;QD&#160;JD&#160;TD&#160;9D&#160;8D&#160;7D&#160;6D&#160;5D&#160;4D&#160;3D&#160;2D&#160;AH&#160;KH<br/>QH&#160;JH&#160;TH&#160;9H&#160;8H&#160;7H&#160;6H&#160;5H&#160;4H&#160;3H&#160;2H&#160;AS&#160;KS&#160;QS&#160;JS&#160;TS&#160;9S&#160;8S&#160;7S&#160;6S&#160;5S&#160;4S&#160;3S&#160;2S<br/>AC&#160;KC&#160;QC&#160;JC&#160;TC&#160;9C&#160;8C&#160;7C&#160;6C&#160;5C&#160;4C&#160;3C&#160;2C&#160;AD&#160;KD&#160;QD&#160;JD&#160;TD&#160;9D&#160;8D&#160;7D&#160;6D&#160;5D&#160;4D&#160;3D&#160;2D&#160;AH&#160;KH<br/>QH&#160;JH&#160;TH&#160;9H&#160;8H&#160;7H&#160;6H&#160;5H&#160;4H&#160;3H&#160;2H&#160;AS&#160;KS&#160;QS&#160;JS&#160;TS&#160;9S&#160;8S&#160;7S&#160;6S&#160;5S&#160;4S&#160;3S&#160;2S<br/>
+<b>Sample&#160;Output</b><br/>
+Case&#160;1:&#160;8H<br/>Case&#160;2:&#160;8H<br/>
+<hr/>
+</body>
+</html>
