@@ -1,16 +1,16 @@
-#include <bits/stdc++.h>
+#include <iostream>
 #include <ranges>
 #include <type_traits>
 
-using namespace std;
+//using namespace std;
 
 template<typename T>
 concept is_core = requires(T x) {
-    cerr << x;
+    std::cerr << x;
 };
 
 template<typename T>
-concept is_iterable = ranges::range<T>;
+concept is_iterable = std::ranges::range<T>;
 
 template<typename T>
 concept is_pair = requires(T x) {
@@ -21,38 +21,38 @@ concept is_pair = requires(T x) {
 template<typename T>
 void print(T x) {
     if constexpr (is_core<T>) {
-        cerr << x;
+        std::cerr << x;
     } else if constexpr (is_pair<T>) {
-        cerr << '(';
+        std::cerr << '(';
         print(x.first);
-        cerr << ", ";
+        std::cerr << ", ";
         print(x.second);
-        cerr << ')';
+        std::cerr << ')';
     } else if constexpr (is_iterable<T>) {
-        cerr << '[';
+        std::cerr << '[';
         bool flag = false;
         for (auto y : x) {
             if (flag) {
-                cerr << ", ";
+                std::cerr << ", ";
             }
             print(y);
             flag = true;
         }
-        cerr << ']';
+        std::cerr << ']';
     } else {
-        cerr << "Unknown type";
+        std::cerr << "Unknown type";
     }
 }
 
 template<typename T>
-void print_debug(string s, T x) {
-    cerr << s << " = ";
+void print_debug(std::string s, T x) {
+    std::cerr << s << " = ";
     print(x);
-    cerr << endl;
+    std::cerr << std::endl;
 }
 
 template<typename T, typename... Args>
-void print_debug(string s, T x, Args... args) {
+void print_debug(std::string s, T x, Args... args) {
     int idx = 0, layer = 0;
     while (idx < ssize(s) && (s[idx] != ',' || layer != 0)) {
         layer += s[idx] == '(' || s[idx] == '{';
@@ -60,9 +60,9 @@ void print_debug(string s, T x, Args... args) {
         idx++;
     }
 
-    cerr << s.substr(0, idx) << " = ";
+    std::cerr << s.substr(0, idx) << " = ";
     print(x);
-    cerr << " | ";
+    std::cerr << " | ";
     print_debug(s.substr(s.find_first_not_of(' ', idx + 1)), args...);
 }
 
